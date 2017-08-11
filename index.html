@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+
+<body>
+	<div id="container"></div>
+	<script type="text/javascript">
+		function createMessage(duration, company)
+		{
+			var message = 'Eu sunt angajata de ' + duration + ' ' + (duration > 1 ? 'ani':'an') + ' in ' + company + '!';
+			return message;
+		}
+
+		function showMessage(message)
+		{
+			console.log(message);
+			//document.getElementById('container').innerHTML = document.getElementById('container').innerHTML + '<br>' + message;
+		}
+
+		var firstName = 'Ligia';
+		var lastName = 'Gurau';
+		showMessage(firstName + ' ' + lastName);
+
+		var town = 'Brasov';
+		showMessage("Numele meu este " + firstName + " " + lastName + " si sunt din " + town + "!");
+
+		var company = 'Projects Abroad';
+		var duration = 1;
+		var message = 'Eu sunt angajata de ' + duration + ' ' + (duration > 1 ? 'ani':'an');
+		showMessage(message);
+		showMessage( message + ' in ' + company + '!');
+
+		var gender = 'F';
+		showMessage('Eu sunt ' + (gender == 'F' ? 'fata':'baiat') + '!');
+
+		duration += 1;
+		showMessage( message + ' in ' + company + '!');
+
+		message = createMessage(duration, company);
+		showMessage(message);
+
+		showMessage('John Doe'.length);
+		showMessage(message.length);
+		showMessage(message.replace('sunt angajata', 'lucrez'));
+		showMessage(message.replace(duration, duration*2));
+		showMessage('John Snow'.substr(0,3));
+		showMessage('John Snow'.substring(1,3));
+		showMessage(message.substr(10,5));
+		showMessage(message.toUpperCase());
+		showMessage('>' + ' abc ' + '<');
+		showMessage('>' + ' abc '.trim() + '<');
+
+		var phrase = 'Nu stiu ce propozitie sa scriu aici ma depaseste';
+
+		showMessage(phrase.indexOf('propozitie'));
+
+		var posFirstSpace = phrase.indexOf(' ');
+
+		showMessage(phrase.substring(0, posFirstSpace));
+
+		var posSecondSpace = phrase.indexOf(' ', posFirstSpace + 1);
+		var secondWord = phrase.substring(posFirstSpace, posSecondSpace);
+
+		showMessage(secondWord.trim());
+
+
+
+	</script>
+</body>
+</html>

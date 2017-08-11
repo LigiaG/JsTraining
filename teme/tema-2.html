@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tema 2</title>
+</head>
+<body>
+ <script type="text/javascript">
+ 	function showMessage(message)
+		{
+			console.log(message);
+		}
+
+ 	var phrase = 'Mie imi place foarte mult sa fac temele date de domnul profesor Alex!';	
+ 	showMessage(phrase);
+
+ //1.
+ 	var message = 'Nr de caractere este: ' + phrase.length;	
+ 	showMessage(message);
+ //2. 
+ 	message = 'Nr de caractere dif de spatiu: ' + (phrase.replace(/ /g,'')).length; 
+	showMessage(message);
+ //3.
+ 	var posFirstSpace = phrase.indexOf(' ');
+	var firstWord = phrase.substring(0, posFirstSpace);
+	showMessage('Primul cuvant cu litere mari este: ' + firstWord.toUpperCase());
+ //4.
+ 	phrase = phrase.replace(firstWord, 'word');
+	showMessage(phrase);
+ //5. 
+ 	message = phrase.substring(phrase.lastIndexOf(' '), phrase.length);
+	showMessage('Exclamarea este intentionata: ' + message.trim());
+ //6.
+ 	posFirstSpace = phrase.indexOf(' ');
+	var posSecondSpace = phrase.indexOf(' ', posFirstSpace + 1);
+	var secondWord = phrase.substring(posFirstSpace + 1, posSecondSpace);
+	phrase = phrase.replace(secondWord + ' ', '');
+	showMessage(phrase);
+
+ </script>
+</body>
+</html>
