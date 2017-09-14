@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tema 3.3</title> 
+</head>
+<body>
+	<div id="container"> </div>
+
+	<script type="text/javascript">
+			function showMessage (message)
+	        {
+	           document.getElementById('container').innerHTML = document.getElementById('container').innerHTML + '<br>' + message; 
+	        }	
+
+	for (var i = 1; i <= 100; i++) {
+		if ((i % 3) == 0) {
+			if ((i % 5) == 0) {
+				showMessage('BuzzFizz');
+			}
+			else {
+				showMessage('Fizz');
+			}
+		}	
+		else if ((i % 5) == 0) {
+			showMessage('Buzz');
+		}	
+		else {
+			showMessage(i);
+		}	
+	}
+				
+	</script>
+</body>
+</html>

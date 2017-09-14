@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Tema 5.1</title>
+</head>
+<body>
+    <p><strong>#NuMaiFitzImaturi!!!</strong></p>
+    <div id="container"></div>
+
+    <script>
+        function showMessage(message)
+        {
+            document.getElementById('container').innerHTML = document.getElementById('container').innerHTML + '<br>' + message; 
+        }
+
+        var numar2 = 2 ** 68;
+        numar2 = numar2.toString();
+        var n = numar2.length;
+        var sum2 = 0;
+        
+        showMessage('Numarul pentru imaturi este: ' + numar2);
+        
+        for (var i = 0 ; i < n; i++) {
+            sum2 = sum2 + parseInt(numar2[i]);
+        }
+        showMessage('Suma pentru imaturi este: ' + sum2);
+
+        var numar = 2 ** 69;
+        numar = numar.toString();
+        var n = numar.length;
+        var sum = 0;
+        
+        showMessage('Numarul pentru maturi este: ' + numar);
+        
+        for (var i = 0 ; i < n; i++) {
+            sum = sum + parseInt(numar[i]);
+        }
+        showMessage('Suma pentru maturi este: ' + sum);
+    </script>
+</body>
+</html>

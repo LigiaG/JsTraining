@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tema 4.1</title> 
+</head>
+<body>
+	<div id = "container"></div>
+
+    <script type="text/javascript">
+        function showMessage(message)
+        {
+            document.getElementById('container').innerHTML = document.getElementById('container').innerHTML + '<br>' + message; 
+        }
+        
+        var variabila = [];
+        
+        for (var i = 0; i < 5; i++) {
+            variabila[i] = parseInt(prompt('Introduceti variabila ' + (i + 1)));
+        }
+        
+        var max = variabila[0];
+        for (var i = 1; i < 5; i++) {
+            if (variabila[i] > max) {
+                max = variabila[i];
+            }
+        }    
+        showMessage('Numarul maxim: ' + max);
+    </script>
+</body>
+</html>

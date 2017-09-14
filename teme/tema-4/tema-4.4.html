@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tema 4.4</title> 
+</head>
+<body>
+    <div id = "container"></div>
+
+    <script type="text/javascript">
+        function showMessage(message)
+        {
+            document.getElementById('container').innerHTML = document.getElementById('container').innerHTML + '<br>' + message; 
+        }
+        
+        var hours = parseInt(prompt('Introduceti ora'));
+        var ore = hours;
+        var minutes = parseInt(prompt('Introduceti minutele'));
+        var minute = minutes;
+        var seconds = parseInt(prompt('Introduceti secundele'));
+        var secunde = seconds;
+        seconds = seconds + 1;
+        if (seconds > 59) {
+            seconds = 0;
+            minutes = minutes + 1;
+        }
+        if (minutes > 59) {
+            minutes = 0;
+            hours = hours + 1;
+        }
+        if (hours > 23) {
+            hours = 0;
+        }
+        showMessage('Timpul mai mare cu o secunda decat ' + ore + 'h' + minute + 'm' + secunde + 's' + ' este ' + hours + 'h' + minutes + 'm' + seconds + 's.');
+    </script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tema 3.1</title> 
+</head>
+<body>
+	<div id = "container"></div>
+
+	<script type="text/javascript">
+			function showMessage(message)
+	        {
+	           document.getElementById('container').innerHTML = document.getElementById('container').innerHTML + '<br>' + message; 
+	        }
+			
+	var fraza = 'Desi cu parere de rau in suflete ne departam de frumoasa vara cu serile calduroase soare arzator si tinute lejere toamna e un bun inlocuitor pentru anotimpul cald frunzele ce se remarcau printr-un verde intens ne impresioneaza cu noile culori care compun peisaje demne de a fi pictate.';
+	showMessage(fraza);
+
+	var n = fraza.length;
+	var consoane = 0;
+	var vocale = 0;
+	for(var i = 0; i < n; i++) {
+		if ((fraza[i] == 'a') || (fraza[i] == 'e') || (fraza[i] == 'i') || (fraza[i] == 'o') || (fraza[i] == 'u') || (fraza[i] == 'ă') || (fraza[i] == 'î') || (fraza[i] == 'â')) {
+			vocale++;
+		}
+		else if ((fraza[i] != ' ') && (fraza[i] != '.')) {
+			consoane++;
+		}
+	}
+	showMessage('Numarul de vocale: ' + vocale);
+	showMessage('Numarul de consoane: ' + consoane);
+				
+	</script>
+</body>
+</html>

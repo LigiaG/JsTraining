@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tema 4.3</title> 
+</head>
+<body>
+    <div id = "container"></div>
+
+    <script type="text/javascript">
+        function showMessage(message)
+        {
+            document.getElementById('container').innerHTML = document.getElementById('container').innerHTML + '<br>' + message; 
+        }
+        
+        var cuvant =  prompt('Introduceti un cuvant:');
+        var n = cuvant.length;
+        var text = '';
+        var string;
+        for (var i = 0; i < n; i++) {
+            var code = cuvant.charCodeAt(i);
+            if (code == 122) {
+                string = String.fromCharCode(97);
+            } else if (code == 90) {
+                string = String.fromCharCode(65);
+            } else {
+                string = String.fromCharCode(code + 1);
+            }
+            text = text + string;
+        }   
+        showMessage('Pentru cuvantul ' + cuvant + ' se afiseaza: ' + text);
+    </script>
+</body>
+</html>

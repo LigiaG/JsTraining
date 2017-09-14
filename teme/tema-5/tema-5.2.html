@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Tema 5.2</title>
+</head>
+<body>
+    <div id="container"></div>
+
+    <script>
+        function showMessage(message)
+        {
+            document.getElementById('container').innerHTML = document.getElementById('container').innerHTML + '<br>' + message; 
+        }
+
+        function chestieRara(number)
+        {
+            number = number.toString();
+            var n = number.length;
+            var sum = 0;
+            for (var i = 0 ; i < n; i++) {
+                sum = sum + (parseInt(number[i]) ** 4);
+            }
+            return sum;   
+        }
+        for (var i = 2; i <= 10000; i++) {
+            if (i == chestieRara(i)) {
+                showMessage('Numarul ' + i + ' are suma cifrelor lui ridicate la puterea 4 egala cu numarul insusi.');
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+
+<body>
+	<div id="container"></div>
+	<script type="text/javascript">
+		
+		function show(message)
+		{
+			document.getElementById('container').innerHTML = document.getElementById('container').innerHTML + '<br>' + message;
+		}
+
+		if (5 == '1') {
+			show("1 este egal cu '1'");
+		} else {
+			show("alt mesaj");
+		}
+
+		var a = 1;
+		var b = 3;
+
+		if (a >= b) {
+			show('Nr mai mare este:' + a );
+		} else {
+			show('Nr mai mare este:' + b );
+		}
+
+		var firstName = 'Alex';
+		var secondName = 'Ioana';
+
+		if (firstName > secondName) {
+			show(firstName + ', ' + secondName);
+		} else {
+			show(secondName + ', ' + firstName);
+		}
+
+
+		var number = 6;
+
+		if (number == 0) {
+			show('Valoarea este 0.');
+		} else if (number % 2 == 0) {
+			show('Numarul este par.');
+		} else {
+			show('Numarul este impar.');
+		}
+
+		for (number = 1; number <= 5; number++) {
+			show(number);
+		}
+
+		var text = "Alex is sublime!";
+
+		var textLength = text.length;
+
+		for (var i = 0; i < textLength; i++) {
+			show('Caracterul de pe pozitia ' + (i + 1) + ' este ' + text[i]);
+		}
+
+
+		for (var i = textLength -1 ; i >= 0; i--) {
+			show('Caracterul de pe pozitia ' + (i + 1) + ' este ' + text[i]);
+		}
+
+		var number = prompt('Introdu un numar de la 0 la 10');
+		show(number);
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tema 4.2</title> 
+</head>
+<body>
+    <div id = "container"></div>
+
+    <script type="text/javascript">
+        function showMessage(message)
+        {
+            document.getElementById('container').innerHTML = document.getElementById('container').innerHTML + '<br>' + message; 
+        }
+        
+        var cuvant =  prompt('Introduceti un cuvant: ');
+        var n = cuvant.length;
+        var palindrom = true;
+        for (var i = 0; i < (n / 2); i++) {
+            if (cuvant[i] != cuvant[n-i-1]) {
+                palindrom = false;
+            }
+        }
+        
+        if (palindrom == true) {
+            showMessage(cuvant + ' este palindrom');
+        } else {
+            showMessage(cuvant + ' nu este palindrom');
+        }
+       
+    </script>
+</body>
+</html>
