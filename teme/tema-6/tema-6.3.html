@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tema 6.3</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+</head>
+<body>
+    <p>Scrieti o functie JS care sa inverseze un numar.</p>
+    <div id="container"></div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        function show(message)
+        {
+            $('#container').html($('#container').html() + '<br>' + message);
+        }
+            
+        var x = 123456;
+
+        show(x);
+
+        reverseX = x.toString().split("").reverse().join("");
+        
+        show(reverseX);
+
+    </script>
+</body>
+</html>
