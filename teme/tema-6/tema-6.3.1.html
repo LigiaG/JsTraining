@@ -16,11 +16,15 @@
             $('#container').html($('#container').html() + '<br>' + message);
         }
             
-        var x = 123456;
+        var x = 123456 + '';
+        var y = '';
+        var n = x.length;
+        for (var i = 0; i < n; i++) {
+            y += x[n - i - 1];
+        }
         show(x);
-        reverseX = x.toString().split("").reverse().join("");
-        
-        show(reverseX);
+        show(y);
+
     </script>
 </body>
 </html>
